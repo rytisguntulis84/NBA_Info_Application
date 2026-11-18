@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">NBA Info</string>
+
+    <string name="tab_home">Home</string>
+    <string name="tab_players">Players</string>
+    <string name="sort_by">Sort by</string>
+    <string name="sort_name">Name</string>
+    <string name="sort_city">City</string>
+    <string name="sort_conference">Conference</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="action_retry">Retry</string>
+
+    <string name="column_team_name">Name</string>
+    <string name="column_city">City</string>
+    <string name="column_conference">Conference</string>
+    <string name="column_first_name">First Name</string>
+    <string name="column_last_name">Last Name</string>
+    <string name="column_team">Team</string>
+    <string name="column_home_name">Home\nName</string>
+    <string name="column_home_score">Home\nScore</string>
+    <string name="column_visitor_name">Visitor\nName</string>
+    <string name="column_visitor_score">Visitor\nScore</string>
+
+    <string name="back_to_home">&lt; Home</string>
+    <string name="back_to_players">&lt; Players</string>
+    <string name="search_hint">Search</string>
+    <string name="team_games_title">Team Games</string>
+    <string name="value_unavailable">-</string>
+
+    <string name="loading_teams">Loading NBA teams…</string>
+    <string name="error_loading_teams">Failed to load NBA teams</string>
+    <string name="empty_teams">No NBA teams found.</string>
+    <string name="loading_players">Loading players…</string>
+    <string name="error_loading_players">Failed to load players</string>
+    <string name="rate_limit_title">Rate Limit Reached</string>
+    <string name="rate_limit_message">Too many requests. Please wait a moment and try again.</string>
+    <string name="empty_players">No players found.</string>
+    <string name="empty_players_matching_query">No players matching %1$s</string>
+    <string name="loading_games">Loading games…</string>
+    <string name="error_loading_games">Failed to load games</string>
+    <string name="empty_games">No games found for this season.</string>
+    <string name="error_try_again">Please try again.</string>
+</resources>
