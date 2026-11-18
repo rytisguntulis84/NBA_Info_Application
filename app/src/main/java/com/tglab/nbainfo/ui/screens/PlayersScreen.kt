@@ -171,7 +171,7 @@ private fun PlayersScreenContent(
                     .fillMaxWidth()
                     .weight(1f)
             ) {
-                when (val state = uiState) {
+                when (uiState) {
                     is PlayersUiState.Loading -> {
                         Column(
                             modifier = Modifier.fillMaxSize(),
@@ -197,7 +197,7 @@ private fun PlayersScreenContent(
                         ) {
                             Text(
                                 text = stringResource(
-                                    if (state.isRateLimited) {
+                                    if (uiState.isRateLimited) {
                                         R.string.rate_limit_title
                                     } else {
                                         R.string.error_loading_players
@@ -210,7 +210,7 @@ private fun PlayersScreenContent(
                             Spacer(modifier = Modifier.height(8.dp))
                             Text(
                                 text = stringResource(
-                                    if (state.isRateLimited) {
+                                    if (uiState.isRateLimited) {
                                         R.string.rate_limit_message
                                     } else {
                                         R.string.error_try_again
@@ -227,7 +227,7 @@ private fun PlayersScreenContent(
                     }
 
                     is PlayersUiState.Success -> {
-                        if (state.players.isEmpty()) {
+                        if (uiState.players.isEmpty()) {
                             Box(
                                 modifier = Modifier.fillMaxSize(),
                                 contentAlignment = Alignment.Center
@@ -249,7 +249,7 @@ private fun PlayersScreenContent(
                                 contentPadding = PaddingValues(0.dp)
                             ) {
                                 items(
-                                    items = state.players,
+                                    items = uiState.players,
                                     key = { it.id }
                                 ) { player ->
                                     PlayerRow(

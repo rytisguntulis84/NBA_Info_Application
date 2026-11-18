@@ -179,7 +179,7 @@ private fun TeamGamesSheetBody(
                 .fillMaxWidth()
                 .weight(1f)
         ) {
-            when (val state = uiState) {
+            when (uiState) {
                 is TeamGamesUiState.Loading -> {
                     Column(
                         modifier = Modifier.fillMaxSize(),
@@ -222,7 +222,7 @@ private fun TeamGamesSheetBody(
                 }
 
                 is TeamGamesUiState.Success -> {
-                    if (state.games.isEmpty()) {
+                    if (uiState.games.isEmpty()) {
                         Box(
                             modifier = Modifier.fillMaxSize(),
                             contentAlignment = Alignment.Center
@@ -241,7 +241,7 @@ private fun TeamGamesSheetBody(
                         }
 
                         LaunchedEffect(shouldLoadMore) {
-                            if (shouldLoadMore && !state.isLoadingMore && !state.isEndReached) {
+                            if (shouldLoadMore && !uiState.isLoadingMore && !uiState.isEndReached) {
                                 onLoadMore()
                             }
                         }
@@ -252,13 +252,13 @@ private fun TeamGamesSheetBody(
                             verticalArrangement = Arrangement.spacedBy(4.dp)
                         ) {
                             items(
-                                items = state.games,
+                                items = uiState.games,
                                 key = { it.id }
                             ) { game ->
                                 GameRow(game = game)
                             }
 
-                            if (state.isLoadingMore) {
+                            if (uiState.isLoadingMore) {
                                 item {
                                     Box(
                                         modifier = Modifier
