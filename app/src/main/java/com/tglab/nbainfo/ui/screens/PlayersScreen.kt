@@ -96,7 +96,7 @@ private fun PlayersScreenContent(
                     fontSize = 32.sp
                 )
             )
-            Spacer(modifier = Modifier.height(8.dp))
+            Spacer(modifier = Modifier.height(16.dp))
             Surface(
                 shape = RoundedCornerShape(16.dp),
                 color = NbaLightBg,
